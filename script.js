@@ -1,6 +1,7 @@
 /* =====================================================
-   THE GLOW TEAM · script.js
-   
+   ROYAL TEAM · script.js
+   1) Edita la sección CONFIGURACIÓN con los datos de tu team.
+   2) El resto es el código que hace funcionar la página.
    ===================================================== */
 
 /* ============ CONFIGURACIÓN (edita aquí) ============ */
@@ -16,28 +17,26 @@ const CONFIG = {
 
 // Admins del team. "contacto" es opcional (mismo formato del número de arriba).
 const ADMINS = [
-  { nombre: "Soul",  cargo: "Owner", texto: "Crea y cuida el reino. Aprueba los roles y resuelve dudas.", contacto: "528110516151" },
-  { nombre: "Yeji",  cargo: "Mano derecha",    texto: "Organiza los eventos y las actividades diarias."             },
-  { nombre: "Jongseob", cargo: "Guardián del orden", texto: "Se encarga de las reglas y de que todos la pasen bien." }
-  { nombre: "Ningning", cargo: "Bufon", texto: "Procura mantener un ambiente tranquilo y divertido." }
+  { nombre: "Soul",     cargo: "Owner",              texto: "Crea y cuida el reino. Aprueba los roles y resuelve dudas.", contacto: "528110516151" },
+  { nombre: "Yeji",     cargo: "Mano derecha",       texto: "Organiza los eventos y las actividades diarias.",            contacto: "" },
+  { nombre: "Jongseob", cargo: "Guardián del orden", texto: "Se encarga de las reglas y de que todos la pasen bien.",     contacto: "" },
+  { nombre: "Ningning", cargo: "Bufón",              texto: "Procura mantener un ambiente tranquilo y divertido.",        contacto: "" }
 ];
 
 // Roles de idols. Cambia los nombres por los que tu team quiera ofrecer.
 // estado: "libre" o "ocupado". Si está ocupado, puedes poner "dueno" con el nombre de quien lo tiene.
 const ROLES = [
-  { idol: "Keeho",  grupo: "P1harmony", estado: "libre" },
-  { idol: "Yeonjun ",  grupo: "TXT", estado: "libre" },
-  { idol: "Jake",  grupo: "Enhypen", estado: "libre" },
-  { idol: "San",  grupo: " Ateez", estado: "libre" },
-  { idol: "Bangchan",  grupo: "Skz ", estado: "libre" },
-  { idol: "Chuu",  grupo: "Solista", estado: "libre" },
-  { idol: "Lia",  grupo: "Itzy", estado: "libre" },
-  { idol: "Yuqi",  grupo: "Idle", estado: "libre" },
-  { idol: "Sunghoon",  grupo: "Enhypen", estado: "libre" },
-  { idol: "Taehyun", grupo: "TXT", estado: "libre" }
+  { idol: "Keeho",    grupo: "P1harmony", estado: "libre" },
+  { idol: "Yeonjun",  grupo: "TXT",       estado: "libre" },
+  { idol: "Jake",     grupo: "Enhypen",   estado: "libre" },
+  { idol: "San",      grupo: "Ateez",     estado: "libre" },
+  { idol: "Bangchan", grupo: "Skz",       estado: "libre" },
+  { idol: "Chuu",     grupo: "Solista",   estado: "libre" },
+  { idol: "Lia",      grupo: "Itzy",      estado: "libre" },
+  { idol: "Yuqi",     grupo: "Idle",      estado: "libre" },
+  { idol: "Sunghoon", grupo: "Enhypen",   estado: "libre" },
+  { idol: "Taehyun",  grupo: "TXT",       estado: "libre" }
 ];
-
-
 
 /* ============ FIN DE LA CONFIGURACIÓN ============ */
 
@@ -159,10 +158,6 @@ $("#form-reserva").addEventListener("submit", (e) => {
   cerrarModal();
   renderRoles();
 });
-
-
-
-}
 
 /* ---------- Arranque ---------- */
 renderAdmins();
